@@ -1,0 +1,52 @@
+GET http://localhost:3000/todos/?status=TO%20DO
+###
+
+GET http://localhost:3000/todos/?priority=HIGH
+###
+
+GET http://localhost:3000/todos/?priority=HIGH&status=IN%20PROGRESS
+###
+
+GET http://localhost:3000/todos/?search_q=Play
+###
+
+GET http://localhost:3000/todos/4/
+###
+
+POST http://localhost:3000/todos/
+Content-Type: application/json
+
+{
+  "id": 9,
+  "todo": "Learn Express",
+  "priority": "HIGH",
+  "status": "IN PROGRESS"
+}
+###
+
+PUT http://localhost:3000/todos/6/
+Content-Type: application/json
+
+{
+  "status": "DONE"
+}
+###
+
+PUT http://localhost:3000/todos/6/
+Content-Type: application/json
+
+{
+  "priority": "HIGH"
+}
+###
+
+PUT http://localhost:3000/todos/6/
+Content-Type: application/json
+
+{
+  "todo": "some task"
+}
+###
+
+DELETE http://localhost:3000/todos/8/
+###
